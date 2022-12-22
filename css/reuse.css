@@ -60,12 +60,14 @@
   color: #396df2;
   cursor: pointer;
   white-space: nowrap;
-  transition: linear 0.5s ;
+  transition: linear 0.5s;
 }
-.btn-light:hover{
-    background:#396df2 ;
-    color: white;
+
+.btn-light:hover {
+  background: #396df2;
+  color: white;
 }
-.logo{
-    width: 48px;
+
+.logo {
+  width: 48px;
 }

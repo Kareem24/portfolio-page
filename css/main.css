@@ -47,8 +47,8 @@ body {
   font-size: 2rem;
 }
 
-.introduction .text ,
-.about .text{
+.introduction .text,
+.about .text {
   width: 80%;
   margin: 50px auto;
 }
@@ -120,7 +120,8 @@ body {
   align-items: center;
   gap: 8px;
 }
-.footer{
+
+.footer {
   background: #fff;
   width: 100%;
   border-top-right-radius: 50px;
@@ -128,26 +129,27 @@ body {
   min-height: 100vh;
 }
 
-.footer .categories{
+.footer .categories {
   width: 80%;
   margin: 48px auto;
 }
 
-.categories .category{
+.categories .category {
   padding: 12px;
 }
 
-.category .language-skill{
+.category .language-skill {
   display: flex;
   justify-content: space-between;
 }
-.language-skill p{
+
+.language-skill p {
   font-weight: 500;
   font-size: 20px;
-  color: #000000;
+  color: #000;
 }
 
-.category .program-lang{
+.category .program-lang {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -155,22 +157,20 @@ body {
   margin: 24px 0 0;
 }
 
-.program-lang .program{
+.program-lang .program {
   width: 303px;
-    height: 66.72px;
-    background: #f7f7f9;
-    border-radius: 8px;
-    padding: 12px;
-    display: flex;
-    gap: 16px;
-    align-items: center;
+  height: 66.72px;
+  background: #f7f7f9;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
-.program p{
+.program p {
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
   color: #253858;
 }
-
-
