@@ -1,34 +1,31 @@
 body {
   font-family: "Poppins", sans-serif;
-  background: #f4f5f7;
 }
 
 .main {
   width: 100%;
-  background: url(../images/mobile.png), #fff;
+  background: url(../images/mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
-  border-bottom-left-radius: 50px;
-  padding: 40px 0;
+  height: 100vh;
 
-  /* height: 100vh; */
+  /* background-position: bottom; */
 }
 
 .header,
-.introduction,
-.about {
+.introduction {
   width: 100%;
 }
 
 .navbar {
   width: 80%;
-  margin: auto;
+  margin: 50px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.navbar .links {
+.navbar .nav-links {
   display: none;
 }
 
@@ -47,13 +44,12 @@ body {
   font-size: 2rem;
 }
 
-.introduction .text,
-.about .text {
+.introduction .text {
   width: 80%;
   margin: 50px auto;
 }
 
-.text .heading {
+.text h1 {
   font-style: normal;
   font-weight: 700;
   font-size: 2.5rem;
@@ -75,102 +71,14 @@ body {
   font-size: 1rem;
   color: #7f8cff;
 }
-
 .text .social-links {
   display: flex;
   align-items: flex-start;
   gap: 15px;
   margin: 12px auto;
 }
-
 .social-links .link {
   font-weight: 500;
   font-size: 1.125rem;
   color: #505f79;
-}
-
-/* projects  */
-.projects {
-  width: 100%;
-  margin: 50px auto;
-}
-
-.project-row {
-  background: #fff;
-  border-radius: 16px;
-  width: 80%;
-  margin: 80px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  padding: 20px 20px 25px;
-}
-
-.project-row .topic-text {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 20px 0;
-}
-
-.project-row .language {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer {
-  background: #fff;
-  width: 100%;
-  border-top-right-radius: 50px;
-  padding: 100px 0;
-  min-height: 100vh;
-}
-
-.footer .categories {
-  width: 80%;
-  margin: 48px auto;
-}
-
-.categories .category {
-  padding: 12px;
-}
-
-.category .language-skill {
-  display: flex;
-  justify-content: space-between;
-}
-
-.language-skill p {
-  font-weight: 500;
-  font-size: 20px;
-  color: #000;
-}
-
-.category .program-lang {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  margin: 24px 0 0;
-}
-
-.program-lang .program {
-  width: 303px;
-  height: 66.72px;
-  background: #f7f7f9;
-  border-radius: 8px;
-  padding: 12px;
-  display: flex;
-  gap: 16px;
-  align-items: center;
-}
-
-.program p {
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
-  color: #253858;
 }
