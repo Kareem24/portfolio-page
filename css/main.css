@@ -1,5 +1,24 @@
 body {
   font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+  background: #f4f5f7;
+}
+
+:root {
+  /* primary color */
+  --dark-purple: #091e42;
+  --logo-purple: #6070ff;
+  --text-purple: #344563;
+  --heading-purple: #091e42;
+  --Grayish-blue: #505f79;
+  --grey-backround: #f7f7f9;
+  --purple: #396df2;
+  --link-purple: #7f8cff;
+  --White: #fff;
+  --Black: #000;
+  --neutral: #dfe1e6;
+  --neutral-background: #e5e5e5;
+  --btn-dark: #4053fc;
 }
 
 .main {
@@ -7,9 +26,6 @@ body {
   background: url(../images/mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-
-  /* background-position: bottom; */
 }
 
 .header,
@@ -20,12 +36,9 @@ body {
 .navbar {
   width: 80%;
   margin: 50px auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
-.navbar .nav-links {
+.navbar .links {
   display: none;
 }
 
@@ -33,13 +46,13 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 1.125rem;
-  color: #6070ff;
+  color: var(--logo-purple);
 }
 
 .navbar .hamburger {
   background: none;
   border: none;
-  color: #6070ff;
+  color: var(--logo-purple);
   font-weight: 500;
   font-size: 2rem;
 }
@@ -54,14 +67,14 @@ body {
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 52px;
-  color: #172b4d;
+  color: var(--heading-purple);
 }
 
 .text p {
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
-  color: #344563;
+  color: var(--text-purple);
   margin: 12px auto;
 }
 
@@ -69,16 +82,18 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 1rem;
-  color: #7f8cff;
+  color: var(--link-purple);
 }
+
 .text .social-links {
   display: flex;
   align-items: flex-start;
   gap: 15px;
   margin: 12px auto;
 }
+
 .social-links .link {
   font-weight: 500;
   font-size: 1.125rem;
-  color: #505f79;
+  color: var(--Grayish-blue);
 }
