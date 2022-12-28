@@ -35,7 +35,7 @@ body {
 
 .navbar {
   width: 80%;
-  margin: 50px auto;
+  margin: 20px auto;
 }
 
 .navbar .links {
@@ -47,6 +47,7 @@ body {
   font-weight: 700;
   font-size: 1.125rem;
   color: var(--logo-purple);
+  white-space: nowrap;
 }
 
 .navbar .hamburger {
@@ -68,6 +69,7 @@ body {
   font-size: 2.5rem;
   line-height: 52px;
   color: var(--heading-purple);
+  width: 90%;
 }
 
 .text p {
