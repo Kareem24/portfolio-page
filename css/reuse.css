@@ -2,7 +2,7 @@
 .bold-light {
   font-weight: 600;
   font-size: 0.8rem;
-  color: #344563;
+  color: var(--text-purple);
 }
 
 .bold-light {
@@ -18,14 +18,14 @@
 .desc-text {
   font-weight: 400;
   font-size: 1rem;
-  color: #344563;
+  color: var(--text-purple);
 }
 
 /* dark- heading */
 .heading-dark {
   font-weight: 700;
   font-size: 2rem;
-  color: #344563;
+  color: var(--text-purple);
 }
 
 /* the dot sign  */
@@ -39,7 +39,7 @@
 .lang-use {
   background: #ebebff;
   border-radius: 8px;
-  color: #6070ff;
+  color: var(--logo-purple);
   font-size: 0.75rem;
   padding: 4px;
   width: auto;
@@ -55,17 +55,17 @@
   width: auto;
   height: 48px;
   padding: 0.8em;
-  border: 1px solid #6070ff;
+  border: 1px solid var(--logo-purple);
   border-radius: 8px;
-  color: #396df2;
+  color: var(--purple);
   cursor: pointer;
   white-space: nowrap;
   transition: linear 0.5s;
 }
 
 .btn-light:hover {
-  background: #396df2;
-  color: white;
+  background: var(--purple);
+  color: var(--white);
 }
 
 .logo {
@@ -80,5 +80,5 @@ button {
 .d-flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
