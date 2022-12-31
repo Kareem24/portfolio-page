@@ -65,7 +65,7 @@
 
 .btn-light:hover {
   background: var(--purple);
-  color: var(--white);
+  color: var(--White);
 }
 
 .logo {

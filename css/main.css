@@ -61,12 +61,14 @@ body {
   font-size: 2rem;
 }
 
-.introduction .text {
+.introduction .text,
+.about .text {
   width: 80%;
   margin: 50px auto;
 }
 
-.text h1 {
+.text h1,
+.text h2 {
   font-style: normal;
   font-weight: 700;
   font-size: 2.5rem;
@@ -129,8 +131,9 @@ body {
   flex-wrap: wrap;
   gap: 8px;
 }
+
 .footer {
-  background: #fff;
+  background: var(--White);
   width: 100%;
   border-top-right-radius: 50px;
   padding: 100px 0;
@@ -154,7 +157,7 @@ body {
 .language-skill p {
   font-weight: 500;
   font-size: 20px;
-  color: #000;
+  color: var(--Black);
 }
 
 .category .program-lang {
@@ -168,7 +171,7 @@ body {
 .program-lang .program {
   width: 303px;
   height: 66.72px;
-  background: #f7f7f9;
+  background: var(--grey-backround);
   border-radius: 8px;
   padding: 12px;
   display: flex;
@@ -176,9 +179,31 @@ body {
   align-items: center;
 }
 
+.text h2 {
+  width: 100%;
+}
+
 .program p {
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
   color: #253858;
+}
+
+.language-skill .active {
+  transform: rotate(90deg);
+}
+
+.language-skill .drop-down {
+  background: transparent;
+  border: none;
+  color: #acb7c3;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid var(--neutral);
+  margin: 12px auto;
 }
