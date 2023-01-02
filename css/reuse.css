@@ -49,7 +49,7 @@
 }
 
 .btn-light {
-  background: transparent;
+  background: var(--White);
   font-weight: 500;
   font-size: 1.06rem;
   width: auto;
