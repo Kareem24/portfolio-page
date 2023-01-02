@@ -150,7 +150,6 @@ body {
 }
 
 .category .language-skill {
-  display: flex;
   justify-content: space-between;
 }
 
@@ -161,9 +160,7 @@ body {
 }
 
 .category .program-lang {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 12px;
   margin: 24px 0 0;
 }
@@ -174,9 +171,7 @@ body {
   background: var(--grey-backround);
   border-radius: 8px;
   padding: 12px;
-  display: flex;
   gap: 16px;
-  align-items: center;
 }
 
 .text h2 {
