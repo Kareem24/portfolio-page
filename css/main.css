@@ -207,6 +207,7 @@ hr {
   border-bottom: 1px solid var(--neutral);
   margin: 12px auto;
 }
+
 /* contact form start here */
 .contact-form-container {
   width: 100%;
@@ -256,15 +257,14 @@ hr {
   /* text-align: center; */
 }
 
-
-
 .contact-form .text-area {
   min-height: 170px;
   min-width: 327px;
   border-radius: 8px;
   color: #b3bac5;
 }
-.submit-btn:hover{
+
+.submit-btn:hover {
   background: var(--purple);
   color: var(--White);
 }
