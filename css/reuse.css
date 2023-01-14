@@ -83,3 +83,7 @@ button {
 
   /* justify-content: space-between; */
 }
+
+.white {
+  background: var(--White);
+}
