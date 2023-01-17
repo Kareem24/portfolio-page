@@ -49,7 +49,7 @@
 }
 
 .btn-light {
-  background: transparent;
+  background: var(--White);
   font-weight: 500;
   font-size: 1.06rem;
   width: auto;
@@ -82,4 +82,8 @@ button {
   align-items: center;
 
   /* justify-content: space-between; */
+}
+
+.white {
+  background: var(--White);
 }
