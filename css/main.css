@@ -1,6 +1,5 @@
 body {
   font-family: "Poppins", sans-serif;
-  font-family: "Poppins", sans-serif;
   background: #f4f5f7;
 }
 
@@ -79,7 +78,6 @@ body {
 
 .text p {
   font-style: normal;
-  font-weight: 400;
   font-size: 1rem;
   color: var(--text-purple);
   margin: 12px auto;
@@ -229,7 +227,6 @@ hr {
 }
 
 .contact-form p {
-  font-weight: 400;
   font-size: 1.25rem;
   color: #ebeffe;
   margin: 10px 0 80px;
@@ -245,7 +242,6 @@ hr {
   border: 1px solid #cfd8dc;
   background: #fff;
   border-radius: 8px;
-  font-weight: 400;
   font-size: 1.06rem;
   color: #172b4d;
   width: 100%;
@@ -256,12 +252,11 @@ hr {
 }
 
 .contact-form .text-area {
+  color: #172b4d;
   height: 170px;
   width: 100%;
   border-radius: 8px;
-
-  /* color: #b3bac5; */
-  color: var(--Black);
+  font-family: "Poppins", sans-serif;
   background-color: var(--White);
 }
 
