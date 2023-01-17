@@ -21,7 +21,7 @@ Additional description about the project and its features.
 - Clone the project
 
 ```bash
-git clone https://github.com/user/html-css-template.git
+git clone https://github.com/Kareem24/portfolio-page.git
 
 ```
 

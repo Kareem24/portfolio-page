@@ -1,0 +1,130 @@
+@media (min-width: 786px) {
+  .navbar .hamburger {
+    display: none;
+  }
+
+  .navbar .links {
+    display: initial;
+  }
+
+  .links .close-btn {
+    display: none;
+  }
+
+  .links .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .nav-links a {
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: "Poppins", sans-serif;
+    color: var(--text-purple);
+  }
+
+  .main {
+    width: 100%;
+    background: var(--White);
+    height: auto;
+    padding: 50px 0 80px;
+  }
+
+  .heading-dark {
+    font-size: 2.5rem;
+  }
+
+  .bold-dark,
+  .bold-light {
+    font-size: 1.125rem;
+  }
+
+  /* .main .introduction {
+        background: url(../images/Header-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    } */
+  .main .introduction {
+    background: url('../images/header-desktop-background.png'), var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 95%;
+    margin: 30px auto;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .introduction .text {
+    width: 60%;
+    margin: 70px auto 20px;
+    padding: 50px 50px;
+  }
+
+  .text h1,
+  .text h2 {
+    width: 70%;
+    font-size: 3rem;
+  }
+
+  .text p {
+    font-size: 1.25rem;
+  }
+
+  .contact-form-container {
+    background: url('../images/contact-form-desktop-background.png'), #6070ff;
+    background-size: 100% 90%;
+    background-position: 0 40px;
+    background-repeat: no-repeat;
+    padding: 50px;
+  }
+
+  .contact-form-container .contact-form {
+    width: 90%;
+    margin: auto;
+    border-top-left-radius: 50px;
+    text-align: center;
+    padding: 70px 0 30px;
+  }
+
+  .project-row {
+    flex-direction: row;
+    gap: 46px;
+  }
+
+  .project-row:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .language-skill p {
+    color: var(--text-purple);
+  }
+
+  .footer {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .footer .about,
+  .footer .categories {
+    flex-basis: 50%;
+    width: 100%;
+  }
+
+  .category .program-lang {
+    flex-direction: row;
+  }
+
+  .program-lang .program {
+    width: 122px;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .submit-btn {
+    align-self: center;
+  }
+}
