@@ -1,5 +1,6 @@
 @media (min-width: 786px) {
-  .navbar .hamburger {
+  .navbar .hamburger,
+  .links .close-btn {
     display: none;
   }
 
@@ -7,13 +8,7 @@
     display: initial;
   }
 
-  .links .close-btn {
-    display: none;
-  }
-
   .links .nav-links {
-    display: flex;
-    align-items: center;
     gap: 32px;
   }
 
@@ -25,10 +20,7 @@
   }
 
   .main {
-    width: 100%;
-    background: var(--White);
-    height: auto;
-    padding: 50px 0 80px;
+    padding: 50px 0 0;
   }
 
   .heading-dark {
@@ -40,22 +32,12 @@
     font-size: 1.125rem;
   }
 
-  /* .main .introduction {
-        background: url(../images/Header-bg.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-    } */
   .main .introduction {
     background: url('../images/header-desktop-background.png'), var(--White);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
+    background-size: 100% 90%;
     width: 95%;
     margin: 30px auto;
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    padding-bottom: 100px;
   }
 
   .introduction .text {
@@ -78,15 +60,10 @@
     background: url('../images/contact-form-desktop-background.png'), #6070ff;
     background-size: 100% 90%;
     background-position: 0 40px;
-    background-repeat: no-repeat;
     padding: 50px;
   }
 
   .contact-form-container .contact-form {
-    width: 90%;
-    margin: auto;
-    border-top-left-radius: 50px;
-    text-align: center;
     padding: 70px 0 30px;
   }
 
