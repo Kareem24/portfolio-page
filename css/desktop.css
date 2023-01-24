@@ -56,6 +56,13 @@
     font-size: 1.25rem;
   }
 
+  .project-row .image-col,
+  .project-row .project-text-col {
+    flex-basis: 50%;
+  }
+
+
+
   .contact-form-container {
     background: url('../images/contact-form-desktop-background.png'), #6070ff;
     background-size: 100% 90%;
