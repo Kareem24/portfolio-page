@@ -6,10 +6,16 @@
     <meta name="description" content="My portfolio page" />
     <meta property="og:title" content="Kareem Roqib" />
     <meta property="og:description" content="checkout my portfolio" />
+    <link rel="preload" as="image" href="../images/mobile.png" type="image/webp" />
+    <link
+      rel="preload"
+      as="image"
+      href="../images/header-desktop-background.png"
+      type="image/webp"
+    />
     <!-- <meta property="og:image" content="images/logo.png"> -->
     <title>Kareem Roqib</title>
-    <link rel="stylesheet" href="css/index.css" media="screen" />
-    <!-- <link rel="preload" href="css/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+    <link rel="stylesheet" href="css/index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -25,11 +31,6 @@
       rel="stylesheet"
       media="all"
     />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-      media="(max-width: 786px)"
-    />
   </head>
 
   <body>
@@ -38,7 +39,7 @@
         <nav class="navbar d-flex">
           <a href="#" class="logo">My logo</a>
           <button class="hamburger" type="button" aria-label="menu button">
-            <i class="bx bx-menu"></i>
+            <i class="fa-solid fa-bars"></i>
           </button>
           <div class="links d-none">
             <button type="button" class="close-btn" aria-label="close button"></button>
@@ -94,7 +95,7 @@
     <section class="projects">
       <div class="project-row d-flex">
         <div class="image-col">
-          <img src="images/Snapshoot-Portfolio.svg" alt="" />
+          <img src="images/Snapshoot-Portfolio.svg" alt="" width="600" height="600" />
         </div>
         <div class="project-text-col">
           <h2 class="heading-dark">Tonic</h2>
@@ -118,7 +119,7 @@
       </div>
       <div class="project-row d-flex">
         <div class="image-col">
-          <img src="images/second-project.svg" alt="" />
+          <img src="images/second-project.svg" alt="" width="600" height="600" />
         </div>
         <div class="project-text-col">
           <h2 class="heading-dark">Multi-Post Stories</h2>
@@ -142,7 +143,7 @@
       </div>
       <div class="project-row d-flex">
         <div class="image-col">
-          <img src="images/third-project.svg" alt="" />
+          <img src="images/third-project.svg" alt="" width="600" height="600" />
         </div>
         <div class="project-text-col">
           <h2 class="heading-dark">Tonic</h2>
@@ -166,7 +167,7 @@
       </div>
       <div class="project-row d-flex">
         <div class="image-col">
-          <img src="images/forth-project.svg" alt="" />
+          <img src="images/forth-project.svg" alt="" width="600" height="600" />
         </div>
         <div class="project-text-col">
           <h2 class="heading-dark">Multi-Post Stories</h2>
@@ -245,15 +246,27 @@
           </div>
           <ul class="program-lang d-flex">
             <li class="program d-flex">
-              <img src="images/javascript-image.png" alt="javascript-logo" class="logo" />
+              <img
+                src="images/javascript-image.png"
+                alt="javascript-logo"
+                class="logo"
+                width="100"
+                height="50"
+              />
               <p>Javascript</p>
             </li>
             <li class="program d-flex">
-              <img src="images/html-image.png" alt="html-image" class="logo" />
+              <img
+                src="images/html-image.png"
+                alt="html-image"
+                class="logo"
+                width="100"
+                height="50"
+              />
               <p>Html</p>
             </li>
             <li class="program d-flex">
-              <img src="images/css-image.png" alt="css-logo" class="logo" />
+              <img src="images/css-image.png" alt="css-logo" class="logo" width="100" height="50" />
               <p>CSS</p>
             </li>
           </ul>
@@ -314,8 +327,6 @@
               placeholder="Write your message here"
               required
             ></textarea>
-            <!-- <input type="text" name="comment" id="" maxlength="500" width="100px " height="200px"> -->
-
             <button type="submit" class="btn-light submit-btn">Get It Touch</button>
           </form>
         </div>
