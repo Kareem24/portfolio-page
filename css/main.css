@@ -57,9 +57,10 @@ body {
 .navbar .hamburger {
   background: none;
   border: none;
-  color: var(--logo-purple);
-  font-weight: 500;
-  font-size: 2rem;
+}
+
+.hamburger img {
+  width: 100%;
 }
 
 .introduction .text,
