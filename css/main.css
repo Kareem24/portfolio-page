@@ -2,7 +2,10 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #f4f5f7;
+  background: hsl(220, 16%, 96%);
+  width: 100%;
+
+  /* font: optional; */
 }
 
 :root {
@@ -57,8 +60,9 @@ body {
 }
 
 .navbar .hamburger {
-  background: none;
+  background: red;
   border: none;
+  width: 25px;
 }
 
 .hamburger img {
@@ -98,13 +102,16 @@ body {
 .text .social-links {
   align-items: flex-start;
   gap: 25px;
-  margin: 12px auto;
+  margin: 12px auto 12px 0;
+  justify-content: space-between;
+  max-width: 400px;
 }
 
 .social-links .link {
   font-weight: 500;
   font-size: 1.125rem;
-  padding: 0 12px 0 0;
+
+  /* padding: 0 12px 0 0; */
   margin: 0 10px 0 0;
   color: var(--Grayish-blue);
 }
