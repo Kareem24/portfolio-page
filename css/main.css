@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700;900&display=swap'); */
+
 
 body {
   font-family: "Poppins", sans-serif;
@@ -31,14 +31,33 @@ body {
 }
 
 .main .introduction {
-  background: url(../images/mobile.png), var(--White);
+  background:url(../images/mobile.png), var(--White);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   border-bottom-left-radius: 50px;
   justify-content: center;
   width: 100%;
   height: 100%;
+  position: relative;
+  z-index: 5;
+  /* overflow: hidden; */
 }
+.introduction .background-image{
+  position:absolute;
+  top: 0;
+  left:auto;
+  z-index: 1;
+    width: 90%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    
+}
+.background-image img{
+  width: 100%;
+  height: auto;
+}
+
 
 .header {
   width: 100%;
@@ -60,9 +79,8 @@ body {
 }
 
 .navbar .hamburger {
-  background: red;
   border: none;
-  width: 25px;
+  width: 28px;
 }
 
 .hamburger img {
@@ -73,6 +91,7 @@ body {
 .about .text {
   width: 80%;
   margin: 50px auto;
+  z-index: 2;
 }
 
 .text h1,
@@ -83,6 +102,7 @@ body {
   line-height: 52px;
   color: var(--heading-purple);
   width: 90%;
+  z-index: 2;
 }
 
 .text p {
