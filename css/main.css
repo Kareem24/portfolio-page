@@ -1,5 +1,4 @@
 
-
 body {
   font-family: "Poppins", sans-serif;
   background: hsl(220, 16%, 96%);
@@ -31,7 +30,7 @@ body {
 }
 
 .main .introduction {
-  background:url(../images/mobile.png), var(--White);
+  background: url(../images/mobile.png), var(--White);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   border-bottom-left-radius: 50px;
@@ -40,24 +39,25 @@ body {
   height: 100%;
   position: relative;
   z-index: 5;
+
   /* overflow: hidden; */
 }
-.introduction .background-image{
-  position:absolute;
+
+.introduction .background-image {
+  position: absolute;
   top: 0;
-  left:auto;
+  left: auto;
   z-index: 1;
-    width: 90%;
-    height: auto;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    
+  width: 90%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
-.background-image img{
+
+.background-image img {
   width: 100%;
   height: auto;
 }
-
 
 .header {
   width: 100%;
