@@ -21,14 +21,12 @@
   color: var(--text-purple);
 }
 
-/* dark- heading */
 .heading-dark {
   font-weight: 700;
   font-size: 2rem;
   color: var(--text-purple);
 }
 
-/* the dot sign  */
 .dot {
   width: 10px;
   height: 10px;
@@ -76,7 +74,6 @@ button {
   cursor: pointer;
 }
 
-/* display flex styling */
 .d-flex {
   display: flex;
   align-items: center;

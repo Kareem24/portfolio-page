@@ -1,10 +1,13 @@
+
 body {
   font-family: "Poppins", sans-serif;
-  background: #f4f5f7;
+  background: hsl(220, 16%, 96%);
+  width: 100%;
+
+  /* font: optional; */
 }
 
 :root {
-  /* primary color */
   --dark-purple: #091e42;
   --logo-purple: #6070ff;
   --text-purple: #344563;
@@ -34,6 +37,26 @@ body {
   justify-content: center;
   width: 100%;
   height: 100%;
+  position: relative;
+  z-index: 5;
+
+  /* overflow: hidden; */
+}
+
+.introduction .background-image {
+  position: absolute;
+  top: 0;
+  left: auto;
+  z-index: 1;
+  width: 90%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.background-image img {
+  width: 100%;
+  height: auto;
 }
 
 .header {
@@ -56,17 +79,19 @@ body {
 }
 
 .navbar .hamburger {
-  background: none;
   border: none;
-  color: var(--logo-purple);
-  font-weight: 500;
-  font-size: 2rem;
+  width: 28px;
+}
+
+.hamburger img {
+  width: 100%;
 }
 
 .introduction .text,
 .about .text {
   width: 80%;
   margin: 50px auto;
+  z-index: 2;
 }
 
 .text h1,
@@ -77,6 +102,7 @@ body {
   line-height: 52px;
   color: var(--heading-purple);
   width: 90%;
+  z-index: 2;
 }
 
 .text p {
@@ -95,17 +121,21 @@ body {
 
 .text .social-links {
   align-items: flex-start;
-  gap: 15px;
-  margin: 12px auto;
+  gap: 25px;
+  margin: 12px auto 12px 0;
+  justify-content: space-between;
+  max-width: 400px;
 }
 
 .social-links .link {
   font-weight: 500;
   font-size: 1.125rem;
+
+  /* padding: 0 12px 0 0; */
+  margin: 0 10px 0 0;
   color: var(--Grayish-blue);
 }
 
-/* projects  */
 .projects {
   width: 100%;
   margin: 50px auto;
@@ -120,6 +150,14 @@ body {
   flex-direction: column;
   gap: 20px;
   padding: 20px 20px 25px;
+}
+
+.project-row .image-col {
+  flex-basis: 100%;
+}
+
+.image-col img {
+  width: 100%;
 }
 
 .project-row .topic-text {
@@ -168,11 +206,16 @@ body {
 
 .program-lang .program {
   width: 303px;
-  height: 66.72px;
+  height: auto;
   background: var(--grey-backround);
   border-radius: 8px;
   padding: 12px;
   gap: 16px;
+}
+
+.program .logo {
+  width: 100px;
+  height: 100px;
 }
 
 .text h2 {
@@ -204,7 +247,6 @@ hr {
   margin: 12px auto;
 }
 
-/* contact form start here */
 .contact-form-container {
   width: 100%;
   background: url('../images/contact-form.png'), var(--logo-purple);
@@ -248,8 +290,6 @@ hr {
   width: 100%;
   height: 100%;
   padding: 12px;
-
-  /* text-align: center; */
 }
 
 .contact-form .text-area {
@@ -265,7 +305,7 @@ hr {
   align-self: flex-start;
 }
 
-.submit-btn:hover {
+/* .submit-btn:hover {
   background: var(--purple);
   color: var(--White);
-}
+} */

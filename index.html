@@ -3,22 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/index.css" />
+    <meta name="description" content="My portfolio page" />
+    <meta property="og:title" content="Kareem Roqib" />
+    <meta property="og:description" content="checkout my portfolio" />
+    <!-- <link rel="preload" as="image" href="../images/mobile.png" type="image/webp" />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      rel="preload"
+      as="image"
+      href="../images/header-desktop-background.png"
+      type="image/png"
     />
+    <link rel="preload" as="image" href="../images/contact-form.png" type="image/png" /> -->
+    <!-- <meta property="og:image" content="images/logo.png"> -->
+    <title>Kareem Roqib</title>
+    <link rel="stylesheet" href="css/index.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -26,20 +27,23 @@
       <header class="header">
         <nav class="navbar d-flex">
           <a href="#" class="logo">My logo</a>
-          <button class="hamburger" type="button"><i class="bx bx-menu"></i></button>
+          <button class="hamburger" type="button" aria-label="menu button">
+            <img src="./images/Union.svg" alt="hamburger menu" width="20" height="20" />
+          </button>
           <div class="links d-none">
-            <button type="button" class="close-btn"></button>
+            <button type="button" class="close-btn" aria-label="close button"></button>
 
             <ul class="nav-links d-flex">
-              <li class="nav-link"><a href="">portfolio</a></li>
-              <li class="nav-link"><a href="">about</a></li>
-              <li class="nav-link"><a href="">contact</a></li>
+              <li class="nav-link"><a href="#portfolio">portfolio</a></li>
+              <li class="nav-link"><a href="#about">about</a></li>
+              <li class="nav-link"><a href="#contact">contact</a></li>
             </ul>
           </div>
         </nav>
       </header>
 
-      <section class="introduction d-flex">
+      <section class="introduction d-flex " id="portfolio">
+        <div class="background-image"></div>
         <div class="text">
           <h1>I'm Kareem Glad to see you!</h1>
 
@@ -51,17 +55,27 @@
           <a href="#" class="let-connect">LET'S CONNECT</a>
 
           <div class="social-links d-flex">
-            <a href="https://twitter.com/Adekunle1855" class="link"
-              ><i class="fa-brands fa-twitter"></i
-            ></a>
-            <a href="https://www.linkedin.com/in/kareem-horlah/" class="link"
-              ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
-            <a href="#" class="link"><i class="bx bxl-gmail"></i></a>
-            <a href="https://github.com/Kareem24" class="link"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-            <a href="#" class="link"><i class="fa-solid fa-hand-peace"></i></a>
+            <a
+              href="https://twitter.com/Adekunle1855"
+              class="link"
+              aria-label="go to my twitter profile"
+              ><img src="./images/twitter.svg" alt="" width="20" height="20"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/kareem-horlah/"
+              class="link"
+              aria-label="go to my linkedin profile"
+              ><img src="./images/Linkedin.svg" alt="" width="20" height="20"
+            /></a>
+            <a href="#" class="link" aria-label="send me message on my mail"
+              ><img src="./images/medium.svg" alt="" width="20" height="20"
+            /></a>
+            <a href="https://github.com/Kareem24" class="link" aria-label="go to my github profile"
+              ><img src="./images/github.svg" alt="" width="20" height="20"
+            /></a>
+            <a href="#" class="link" aria-label="go to my angelist profile"
+              ><img src="./images/angellist.svg" alt="" width="20" height="20"
+            /></a>
           </div>
         </div>
       </section>
@@ -71,7 +85,7 @@
     <section class="projects">
       <div class="project-row d-flex">
         <div class="image-col">
-          <img src="images/facebook-project.png" alt="" />
+          <img src="images/Snapshoot-Portfolio.svg" alt="" width="600" height="300" />
         </div>
         <div class="project-text-col">
           <h2 class="heading-dark">Tonic</h2>
@@ -90,12 +104,14 @@
             <p class="lang-use">css</p>
             <p class="lang-use">Javascript</p>
           </div>
-          <button type="button" class="btn-light">See Project</button>
+          <button type="button" class="btn-light" aria-label="click to see project">
+            See Project
+          </button>
         </div>
       </div>
       <div class="project-row d-flex">
         <div class="image-col">
-          <img src="images/uber-project.png" alt="" />
+          <img src="images/second-project.svg" alt="" width="600" height="300" />
         </div>
         <div class="project-text-col">
           <h2 class="heading-dark">Multi-Post Stories</h2>
@@ -114,12 +130,14 @@
             <p class="lang-use">css</p>
             <p class="lang-use">Javascript</p>
           </div>
-          <button type="button" class="btn-light">See Project</button>
+          <button type="button" class="btn-light" aria-label="click to see project">
+            See Project
+          </button>
         </div>
       </div>
       <div class="project-row d-flex">
         <div class="image-col">
-          <img src="images/third-project.png" alt="" />
+          <img src="images/third-project.svg" alt="" width="600" height="300" />
         </div>
         <div class="project-text-col">
           <h2 class="heading-dark">Tonic</h2>
@@ -138,12 +156,14 @@
             <p class="lang-use">css</p>
             <p class="lang-use">Javascript</p>
           </div>
-          <button type="button" class="btn-light">See Project</button>
+          <button type="button" class="btn-light" aria-label="click to see project">
+            See Project
+          </button>
         </div>
       </div>
       <div class="project-row d-flex">
         <div class="image-col">
-          <img src="images/forth-project.png" alt="" />
+          <img src="images/forth-project.svg" alt="" width="600" height="300" />
         </div>
         <div class="project-text-col">
           <h2 class="heading-dark">Multi-Post Stories</h2>
@@ -162,7 +182,9 @@
             <p class="lang-use">css</p>
             <p class="lang-use">Javascript</p>
           </div>
-          <button type="button" class="btn-light">See Project</button>
+          <button type="button" class="btn-light" aria-label="click to see project">
+            See Project
+          </button>
         </div>
       </div>
     </section>
@@ -170,7 +192,7 @@
 
     <div class="footer d-flex">
       <!-- about start here -->
-      <section class="about">
+      <section class="about " id="about">
         <div class="text">
           <h2 class="heading">About Myself</h2>
 
@@ -181,20 +203,33 @@
           </p>
           <a href="#" class="let-connect">LET'S CONNECT</a>
 
-          <div class="social-links">
-            <a href="https://twitter.com/Adekunle1855" class="link"
-              ><i class="fa-brands fa-twitter"></i
-            ></a>
-            <a href="https://www.linkedin.com/in/kareem-horlah/" class="link"
-              ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
-            <a href="#" class="link"><i class="bx bxl-gmail"></i></a>
-            <a href="https://github.com/Kareem24" class="link"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-            <a href="#" class="link"><i class="fa-solid fa-hand-peace"></i></a>
+          <div class="social-links d-flex">
+            <a
+              href="https://twitter.com/Adekunle1855"
+              class="link"
+              aria-label="go to my twitter profile"
+              ><img src="./images/twitter.svg" alt="twitter" width="20" height="20"
+            /></a>
+
+            <a
+              href="https://www.linkedin.com/in/kareem-horlah/"
+              class="link"
+              aria-label="go to my linkedin profile"
+              ><img src="./images/Linkedin.svg" alt="Linkedin icon" width="20" height="20"
+            /></a>
+
+            <a href="#" class="link" aria-label="send me message on my mail"
+              ><img src="./images/medium.svg" alt="medium" width="20" height="20"
+            /></a>
+            <a href="https://github.com/Kareem24" class="link" aria-label="go to my github profile"
+              ><img src="./images/github.svg" alt="github" width="20" height="20"
+            /></a>
+
+            <a href="#" class="link" aria-label="go to my angelist profile"
+              ><img src="./images/angellist.svg" alt="angellist" width="20" height="20"
+            /></a>
           </div>
-          <button type="button" class="btn-light">Get my resume</button>
+          <button type="button" class="btn-light" aria-label="get my resume">Get my resume</button>
         </div>
       </section>
       <!-- avout ends here -->
@@ -206,21 +241,33 @@
         <li class="category">
           <div class="language-skill d-flex">
             <p>Languages</p>
-            <button type="button" class="drop-down active">
+            <button type="button" class="drop-down active" aria-label="languages expand">
               <i class="fa-solid fa-chevron-right"></i>
             </button>
           </div>
           <ul class="program-lang d-flex">
             <li class="program d-flex">
-              <img src="images/javascript-image.png" alt="javascript-logo" class="logo" />
+              <img
+                src="images/javascript-image.png"
+                alt="javascript-logo"
+                class="logo"
+                width="100"
+                height="50"
+              />
               <p>Javascript</p>
             </li>
             <li class="program d-flex">
-              <img src="images/html-image.png" alt="html-image" class="logo" />
+              <img
+                src="images/html-image.png"
+                alt="html-image"
+                class="logo"
+                width="100"
+                height="50"
+              />
               <p>Html</p>
             </li>
             <li class="program d-flex">
-              <img src="images/css-image.png" alt="css-logo" class="logo" />
+              <img src="images/css-image.png" alt="css-logo" class="logo" width="100" height="50" />
               <p>CSS</p>
             </li>
           </ul>
@@ -228,7 +275,7 @@
         <li class="category">
           <div class="language-skill d-flex">
             <p>Frameworks</p>
-            <button type="button" class="drop-down">
+            <button type="button" class="drop-down" aria-label="check the frameworks">
               <i class="fa-solid fa-chevron-right"></i>
             </button>
           </div>
@@ -239,7 +286,7 @@
         <li class="category">
           <div class="language-skill d-flex">
             <p>Skills</p>
-            <button type="button" class="drop-down">
+            <button type="button" class="drop-down" aria-label="check my skills">
               <i class="fa-solid fa-chevron-right"></i>
             </button>
           </div>
@@ -251,7 +298,7 @@
       </ul>
     </div>
     <div class="white">
-      <section class="contact-form-container">
+      <section class="contact-form-container" id="contact">
         <div class="contact-form">
           <h2 class="heading-dark">Contact Me</h2>
           <p>
@@ -281,12 +328,16 @@
               placeholder="Write your message here"
               required
             ></textarea>
-            <!-- <input type="text" name="comment" id="" maxlength="500" width="100px " height="200px"> -->
-
             <button type="submit" class="btn-light submit-btn">Get It Touch</button>
           </form>
         </div>
       </section>
     </div>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
   </body>
 </html>

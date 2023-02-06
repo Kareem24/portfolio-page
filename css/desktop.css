@@ -33,7 +33,7 @@
   }
 
   .main .introduction {
-    background: url('../images/header-desktop-background.png'), var(--White);
+    background: /* url('../images/header-desktop-background.png'),*/ var(--White);
     background-size: 100% 90%;
     width: 95%;
     margin: 30px auto;
@@ -54,6 +54,11 @@
 
   .text p {
     font-size: 1.25rem;
+  }
+
+  .project-row .image-col,
+  .project-row .project-text-col {
+    flex-basis: 50%;
   }
 
   .contact-form-container {
