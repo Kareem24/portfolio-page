@@ -61,10 +61,11 @@
   transition: linear 0.5s;
 }
 
+/*
 .btn-light:hover {
   background: var(--purple);
   color: var(--White);
-}
+} */
 
 .logo {
   width: 48px;
