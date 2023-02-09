@@ -5,8 +5,6 @@ body {
   width: 100%;
   position: relative;
   overflow-x: hidden;
-
-  /* font: optional; */
 }
 
 :root {
@@ -40,8 +38,6 @@ body {
   width: 100%;
   height: 100%;
   margin-top: 40px;
-
-  /* overflow: hidden; */
 }
 
 .background-image img {
@@ -124,8 +120,6 @@ body {
 .social-links .link {
   font-weight: 500;
   font-size: 1.125rem;
-
-  /* padding: 0 12px 0 0; */
   margin: 0 10px 0 0;
   color: var(--Grayish-blue);
 }

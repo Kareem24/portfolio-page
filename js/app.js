@@ -1,5 +1,5 @@
-const showMenu = document.querySelector('.hamburger');
-const hideMenu = document.querySelector('.close-btn');
+const showMenu = document.getElementById('hamburger');
+const hideMenu = document.getElementById('close-btn');
 const navlinks = document.querySelector('.links');
 showMenu.addEventListener('click', () => {
   navlinks.classList.add('show-nav');
