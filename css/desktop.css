@@ -33,7 +33,7 @@
   }
 
   .main .introduction {
-    background: /* url('../images/header-desktop-background.png'),*/ var(--White);
+    background: url('../images/header-desktop-background.png'), var(--White);
     background-size: 100% 90%;
     width: 95%;
     margin: 30px auto;
