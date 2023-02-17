@@ -81,3 +81,7 @@ button {
 .white {
   background: var(--White);
 }
+
+.hidden {
+  overflow: hidden;
+}
