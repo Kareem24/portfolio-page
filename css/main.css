@@ -151,7 +151,6 @@ body {
 .project-row .topic-text {
   gap: 12px;
   margin: 20px 0;
-  position: relative;
 }
 
 .project-row .language {
@@ -296,14 +295,19 @@ hr {
 
 /* pop-up design */
 .projects .pop-up {
-  width: 90%;
-  position: fixed;
-  top: -30px;
-  left: 5%;
+  width: 80%;
+  height: auto;
   padding: 30px  20px;
-  align-items: flex-start;
-  z-index: 4;
+  margin: 20px auto;
 }
+
+.pop-up-description .btn-lang .pop-up-language {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
 
 .pop-up-description .pop-up-btns {
   gap: 30px;

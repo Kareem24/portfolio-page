@@ -4,10 +4,7 @@ const data = [
     title: 'Tonic',
     image: 'images/Snapshoot-Portfolio.svg',
     description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae provident itaque
-            odit, atque ab, repudiandae reiciendis inventore necessitatibus architecto omnis, quasi
-            tenetur possimus deleniti facilis. Aut nostrum rem, excepturi repellat odit recusandae
-            cumque nobis aliquam. Eius saepe debitis dolorum quaerat sed error, facilis id vero,
-            excepturi sequi qui, natus vitae? lorem444`,
+            odit, atque ab, repudiandae reiciendis inventore necessitatibus architecto omnis, quasi`,
     technology: ['html', 'css', 'javascript'],
     live: 'hello.com',
     source: 'github.com',
@@ -26,10 +23,7 @@ const data = [
     title: 'Multi-Post Stories',
     image: 'images/third-project.svg',
     description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae provident itaque
-            odit, atque ab, repudiandae reiciendis inventore necessitatibus architecto omnis, quasi
-            tenetur possimus deleniti facilis. Aut nostrum rem, excepturi repellat odit recusandae
-            cumque nobis aliquam. Eius saepe debitis dolorum quaerat sed error, facilis id vero,
-            excepturi sequi qui, natus vitae? lorem444`,
+            odit, atque ab, repudiandae reiciendis inventore necessitatibus architecto omnis, `,
     technology: ['html', 'css', 'javascript', 'ruby'],
     live: 'hello.com',
     source: 'github.com',
@@ -50,7 +44,7 @@ const showMenu = document.querySelector('#hamburger');
 const hideMenu = document.querySelector('#close-btn');
 const navlinks = document.querySelector('.links');
 const projectBtns = document.querySelectorAll('.see-project');
-const projectDiv = document.querySelector('.pop-up');
+const projectDiv = document.querySelector('.center');
 const modal = document.querySelector('.modal');
 const body = document.querySelector('body');
 
@@ -76,56 +70,58 @@ const showProject = projectBtns.forEach(projectBtn => {
         modal.classList.remove('d-none');
         body.classList.add('hidden');
         projectDiv.innerHTML = `
-        <div class="project-text-col">
-          <h2 class="heading-dark">${title}</h2>
-          <div class="d-flex subtitle">
-            <div class="topic-text d-flex">
-              <p class="bold-dark">CANOPY</p>
-              <div class="dot"></div>
-              <p class="bold-light">Backend Dev</p>
-              <div class="dot"></div>
-              <p class="bold-light">2015</p>
+        <div class="project-row d-flex pop-up">
+          <div class="project-text-col">
+            <h2 class="heading-dark">${title}</h2>
+            <div class="d-flex subtitle">
+              <div class="topic-text d-flex">
+                <p class="bold-dark">CANOPY</p>
+                <div class="dot"></div>
+                <p class="bold-light">Backend Dev</p>
+                <div class="dot"></div>
+                <p class="bold-light">2015</p>
+              </div>
+              <div class="modal-btn">
+                
+                <button type="button" class="close-modal">
+                <img src=./images/closing-modal.png alt="close button" width="20" height="20" />
+                </button>
+              </div>
             </div>
-            <div class="modal-btn">
-              
-              <button type="button" class="close-modal">
-              <img src=./images/closing-modal.png alt="close button" width="20" height="20" />
-              </button>
+            <div class="image-col">
+              <img src=${image} alt="" />
             </div>
           </div>
-          <div class="image-col">
-            <img src=${image} alt="" />
-          </div>
-        </div>
-        <div class="pop-up-description">
-          <p class="description-text desc-text ">
-            ${description}
-          </p>
-          <div class="btn-lang">
-            <div class=" d-flex pop-up-language">
-              ${technologies}
-            </div>
+          <div class="pop-up-description">
+            <p class="description-text desc-text ">
+              ${description}
+            </p>
+            <div class="btn-lang">
+              <div class=" d-flex pop-up-language">
+                ${technologies}
+              </div>
 
-            <div class="pop-up-btns d-flex">
-              <a href="${live}">
-                <button
-                  type="button"
-                  class="btn-light pop-up-btn d-flex"
-                  aria-label="click to see the site preview"
-                >
-                  see live <img src="./images/go-live.png" alt="" width="15" height="15" />
-                </button>
-              </a>
-              <a href="${source}">
-                <button
-                  type="button"
-                  class="btn-light pop-up-btn d-flex"
-                  aria-label="click to see source code"
-                >
-                  see source
-                  <img src="./images/github.png" alt="" width="15" height="15" />
-                </button>
-              </a>
+              <div class="pop-up-btns d-flex">
+                <a href="${live}">
+                  <button
+                    type="button"
+                    class="btn-light pop-up-btn d-flex"
+                    aria-label="click to see the site preview"
+                  >
+                    see live <img src="./images/go-live.png" alt="" width="15" height="15" />
+                  </button>
+                </a>
+                <a href="${source}">
+                  <button
+                    type="button"
+                    class="btn-light pop-up-btn d-flex"
+                    aria-label="click to see source code"
+                  >
+                    see source
+                    <img src="./images/github.png" alt="" width="15" height="15" />
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>

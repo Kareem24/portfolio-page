@@ -113,10 +113,8 @@
   /* pop-up design */
   .projects .pop-up {
     width: 60%;
-    top: -10px;
-    left: 20%;
     flex-direction: column;
-    padding: 40px 30px;
+    padding: 23px 30px;
   }
 
   .pop-up-description .pop-up-btns {
@@ -151,18 +149,9 @@
     flex-basis: 50%;
   }
 
-  /* .pop-up-description .desc-text{
-                  height: 200px;
-                  /* overflow-y: hidden; */
 
-  /* overflow-y: scroll;
-                }  */
-  .pop-up-description .btn-lang .pop-up-language {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-  }
+
+
 
   .pop-up-language p {
     width: auto;
