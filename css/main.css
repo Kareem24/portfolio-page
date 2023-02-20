@@ -293,14 +293,73 @@ hr {
   align-self: flex-start;
 }
 
+/* pop-up design */
+.projects .pop-up {
+  width: 80%;
+  height: auto;
+  padding: 30px  20px;
+  margin: 20px auto;
+}
+
+.pop-up-description .btn-lang .pop-up-language {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.pop-up-description .pop-up-btns {
+  gap: 30px;
+}
+
+.pop-up-btns .pop-up-btn {
+  gap: 8px;
+}
+
+.subtitle {
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.subtitle .close-modal {
+  all: unset;
+  position: absolute;
+  top: -55px;
+  right: 40px;
+  cursor: pointer;
+}
+
+.project-text-col {
+  width: 100%;
+}
+
+/* modal design */
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(193, 199, 208, 0.7012);
+
+  /* mix-blend-mode: multiply; */
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+  z-index: 3;
+}
+
 /* toggle of the navbar */
 @media screen and (max-width: 785px) {
+  /* .navbar{
+    z-index: 3333;
+  } */
   .navbar .links {
     transition: 0.6s linear;
   }
 
   .navbar .show-nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -312,6 +371,7 @@ hr {
     padding: 62px 38px 20px 28px;
     align-items: flex-start;
     transform: translateX(0);
+    z-index: 333;
   }
 
   .close-btn {
@@ -333,7 +393,6 @@ hr {
     color: var(--White);
     font-weight: 600;
     font-size: 2rem;
-    z-index: 3;
     text-transform: capitalize;
   }
 }
