@@ -136,3 +136,90 @@ const showProject = projectBtns.forEach(projectBtn => {
     });
   });
 });
+
+// form validation
+const nameInput = document.querySelector('.name');
+const emailInput = document.querySelector('.email');
+const messageInput = document.querySelector('.text-area');
+const nameError = document.querySelector('.name-error');
+const nameValid = document.querySelector('.name-valid');
+const emailError = document.querySelector('.email-error');
+const emailValid = document.querySelector('.email-valid');
+const messageError = document.querySelector('.message-error');
+const messageValid = document.querySelector('.message-valid');
+const submitBtn = document.getElementById('submit-btn');
+function disableBtn(value) {
+  submitBtn.disabled = value;
+  submitBtn.classList.add('disable');
+}
+
+// console.log(nameInput,emailInput,messageInput,nameError,emailError,messageError);
+nameInput.addEventListener('input', () => {
+  const name = nameInput.value;
+  if (name.length === 0) {
+    nameError.innerHTML = 'Name is required';
+    nameValid.innerHTML = `<span class='bad'>bad</span>`;
+    disableBtn(true);
+    return false;
+  }
+  if (!name.match(/^[A-za-z]*\s{1}[A-Za-z]*$/)) {
+    nameError.innerHTML = 'Write full name';
+    nameValid.innerHTML = `<span class='bad'>bad</span>`;
+    disableBtn(true);
+
+    return false;
+  } else {
+    nameError.innerHTML = ' ';
+    nameValid.innerHTML = `<span class='good'>good</span>`;
+    disableBtn(false);
+    submitBtn.classList.remove('disable');
+
+    return true;
+  }
+});
+// validate email
+emailInput.addEventListener('input', () => {
+  const email = emailInput.value;
+  if (email.length === 0) {
+    emailError.innerHTML = 'Email is required';
+    emailValid.innerHTML = `<span class='bad'>bad</span>`;
+    disableBtn(true);
+
+    return false;
+  }
+  if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+    emailError.innerHTML = 'Email is not valid';
+    emailValid.innerHTML = `<span class='bad'>bad</span>`;
+    disableBtn(true);
+
+    return false;
+  } else {
+    emailError.innerHTML = ' ';
+    emailValid.innerHTML = `<span class='good'>good</span>`;
+    disableBtn(false);
+    submitBtn.classList.remove('disable');
+    return true;
+  }
+});
+// message validation
+messageInput.addEventListener('input', () => {
+  const message = messageInput.value;
+  const required = 15;
+  const left = required - message.length;
+  if (message.length === 0) {
+    messageError.innerHTML = 'message is required';
+    messageValid.innerHTML = `<span class='bad'>bad</span>`;
+    disableBtn(true);
+  }
+  if (left > 1) {
+    messageError.innerHTML = left + ' more characters required';
+    messageValid.innerHTML = `<span class='bad'>bad</span>`;
+    disableBtn(true);
+  }
+  if (left < 0) {
+    messageError.innerHTML = '';
+    messageValid.innerHTML = `<span class='good'>good</span>`;
+    disableBtn(false);
+    submitBtn.classList.remove('disable');
+  }
+});
