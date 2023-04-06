@@ -326,7 +326,7 @@
             If you have an application you are interested in developing, a feature that you need
             built or a project that needs coding. I'd love to help with it
           </p>
-          <form action="https://formspree.io/f/xknangjb" method="POST" class="form d-flex">
+          <form class="form d-flex" action="https://formspree.io/f/xknangjb" method="post">
             <div class="input-error">
               <input
                 type="text"
@@ -336,10 +336,6 @@
                 maxlength="30"
                 required
               />
-              <span class="name-error error"></span>
-              <div class="icon">
-                <span class="name-valid"></span>
-              </div>
             </div>
             <div class="input-error">
               <input
@@ -347,9 +343,7 @@
                 name="email"
                 class="input email"
                 placeholder="example@gmail.com"
-                required
               />
-              <span class="email-error error "></span>
               <div class="icon">
                 <span class="email-valid"></span>
               </div>
@@ -362,14 +356,13 @@
                 placeholder="Write your message here"
                 required
               ></textarea>
-              <span class="message-error error "></span>
-              <div class="icon">
-                <span class="message-valid"></span>
-              </div>
             </div>
-            <button type="submit" class="btn-light submit-btn " id="submit-btn">
-              Get It Touch
-            </button>
+            <div class="submit-div submit-btn">
+              <button type="submit" class="btn-light submit-btn " id="submit-btn">
+                Get It Touch
+              </button>
+              <p class="error" style="color: red;"></p>
+            </div>
           </form>
         </div>
       </section>

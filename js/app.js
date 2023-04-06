@@ -138,88 +138,28 @@ const showProject = projectBtns.forEach(projectBtn => {
 });
 
 // form validation
-const nameInput = document.querySelector('.name');
 const emailInput = document.querySelector('.email');
-const messageInput = document.querySelector('.text-area');
-const nameError = document.querySelector('.name-error');
-const nameValid = document.querySelector('.name-valid');
+
 const emailError = document.querySelector('.email-error');
 const emailValid = document.querySelector('.email-valid');
-const messageError = document.querySelector('.message-error');
-const messageValid = document.querySelector('.message-valid');
-const submitBtn = document.getElementById('submit-btn');
-function disableBtn(value) {
-  submitBtn.disabled = value;
-  submitBtn.classList.add('disable');
+const error = document.querySelector('.error');
+
+const form = document.querySelector('.form');
+{
+  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 }
+const handleSubmit = e => {
+  const mailValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const formData = new FormData(e.currentTarget);
+  const entries = Object.fromEntries([...formData.entries()]);
+  console.log(entries);
+  let { email } = entries;
+  if (email.match(mailValid) && email === email.toLowerCase()) return true;
 
-// console.log(nameInput,emailInput,messageInput,nameError,emailError,messageError);
-nameInput.addEventListener('input', () => {
-  const name = nameInput.value;
-  if (name.length === 0) {
-    nameError.innerHTML = 'Name is required';
-    nameValid.innerHTML = `<span class='bad'><i class='bx bxs-error-alt'></i></span>`;
-    disableBtn(true);
-    return false;
-  }
-  if (!name.match(/^[A-za-z]*\s{1}[A-Za-z]*$/)) {
-    nameError.innerHTML = 'Write full name';
-    nameValid.innerHTML = `<span class='bad'><i class='bx bxs-error-alt'></i></span>`;
-    disableBtn(true);
+  e.preventDefault();
+  error.textContent = 'invalid email ';
+  emailValid.innerHTML = `<span class='bad'><i class='bx bxs-error-alt'></i></span>`;
 
-    return false;
-  } else {
-    nameError.innerHTML = ' ';
-    nameValid.innerHTML = `<span class='good'><i class='bx bxs-check-circle'></i></span>`;
-    disableBtn(false);
-    submitBtn.classList.remove('disable');
-
-    return true;
-  }
-});
-// validate email
-emailInput.addEventListener('input', () => {
-  const email = emailInput.value;
-  if (email.length === 0) {
-    emailError.innerHTML = 'Email is required';
-    emailValid.innerHTML = `<span class='bad'><i class='bx bxs-error-alt'></i></span>`;
-    disableBtn(true);
-
-    return false;
-  }
-  if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
-    emailError.innerHTML = 'Email is not valid';
-    emailValid.innerHTML = `<span class='bad'><i class='bx bxs-error-alt'></i></span>`;
-    disableBtn(true);
-
-    return false;
-  } else {
-    emailError.innerHTML = ' ';
-    emailValid.innerHTML = `<span class='good'><i class='bx bxs-check-circle'></i></span>`;
-    disableBtn(false);
-    submitBtn.classList.remove('disable');
-    return true;
-  }
-});
-// message validation
-messageInput.addEventListener('input', () => {
-  const message = messageInput.value;
-  const required = 15;
-  const left = required - message.length;
-  if (message.length === 0) {
-    messageError.innerHTML = 'message is required';
-    messageValid.innerHTML = `<span class='bad'><i class='bx bxs-error-alt'></i></span>`;
-    disableBtn(true);
-  }
-  if (left > 1) {
-    messageError.innerHTML = left + ' more characters required';
-    messageValid.innerHTML = `<span class='bad'><i class='bx bxs-error-alt'></i></span>`;
-    disableBtn(true);
-  }
-  if (left < 0) {
-    messageError.innerHTML = '';
-    messageValid.innerHTML = `<span class='good'><i class='bx bxs-check-circle'></i></span>`;
-    disableBtn(false);
-    submitBtn.classList.remove('disable');
-  }
-});
+  console.log(email);
+};
+form.addEventListener('submit', handleSubmit);
