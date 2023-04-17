@@ -13,7 +13,7 @@ body {
   --text-purple: #344563;
   --heading-purple: #091e42;
   --Grayish-blue: #505f79;
-  --grey-backround: #f7f7f9;
+  --grey-background: #f7f7f9;
   --purple: #396df2;
   --link-purple: #7f8cff;
   --White: #fff;
@@ -195,7 +195,7 @@ body {
 .program-lang .program {
   width: 303px;
   height: auto;
-  background: var(--grey-backround);
+  background: var(--grey-background);
   border-radius: 8px;
   padding: 12px;
   gap: 16px;

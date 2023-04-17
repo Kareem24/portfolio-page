@@ -95,3 +95,9 @@ button {
   height: 100vh;
   z-index: 55;
 }
+
+.bottom-err {
+  color: red;
+  display: block;
+  margin-top: 15px;
+}

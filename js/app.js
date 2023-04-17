@@ -142,24 +142,45 @@ const emailInput = document.querySelector('.email');
 
 const emailError = document.querySelector('.email-error');
 const emailValid = document.querySelector('.email-valid');
+const nameValids = document.querySelector('.name-valid');
 const error = document.querySelector('.error');
 
 const form = document.querySelector('.form');
+
 {
   /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 }
+const handleError = (input, regex) => {
+  // const valid = regex
+  return regex.test(input);
+};
 const handleSubmit = e => {
   const mailValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const nameValid = /^[a-zA-Z]+( [a-zA-Z]+)+$/;
   const formData = new FormData(e.currentTarget);
+  const value = [...formData.values()];
   const entries = Object.fromEntries([...formData.entries()]);
-  console.log(entries);
-  let { email } = entries;
-  if (email.match(mailValid) && email === email.toLowerCase()) return true;
+  let { email, name } = entries;
+  const isEmailValid = handleError(email, mailValid);
+  const isNameValid = handleError(name, nameValid);
+
+  if (value.includes('')) {
+    e.preventDefault();
+
+    error.textContent = "value can't be empty";
+    return;
+  }
+  if (isEmailValid && isNameValid) return true;
+
+  isNameValid
+    ? (nameValids.innerHTML = `<span class='good'><i class='bx bxs-check-circle'></i></span>`)
+    : (nameValids.innerHTML = `<span class='bad'><i class='bx bxs-error-alt'></i></span>`);
+  isEmailValid
+    ? (emailValid.innerHTML = `<span class='good'><i class='bx bxs-check-circle'></i></span>`)
+    : (emailValid.innerHTML = `<span class='bad'><i class='bx bxs-error-alt'></i></span>`);
+  error.textContent = 'enter the correct format in the input';
 
   e.preventDefault();
-  error.textContent = 'invalid email ';
-  emailValid.innerHTML = `<span class='bad'><i class='bx bxs-error-alt'></i></span>`;
-
-  console.log(email);
 };
+
 form.addEventListener('submit', handleSubmit);
