@@ -340,12 +340,7 @@
               </div>
             </div>
             <div class="input-error">
-              <input
-                type="email"
-                name="email"
-                class="input email"
-                placeholder="example@gmail.com"
-              />
+              <input type="text" name="email" class="input email" placeholder="example@gmail.com" />
               <div class="icon">
                 <span class="email-valid"></span>
               </div>
@@ -365,7 +360,10 @@
               <button type="submit" class="btn-light submit-btn " id="submit-btn">
                 Get It Touch
               </button>
-              <small class="error bottom-err"></small>
+              <div class="error bottom-err">
+                <span class="empty-value"></span>
+                <span class="naming-error"></span><br /><span class="email-error-message"></span>
+              </div>
             </div>
           </form>
         </div>
