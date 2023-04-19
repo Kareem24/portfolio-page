@@ -136,3 +136,53 @@ const showProject = projectBtns.forEach(projectBtn => {
     });
   });
 });
+
+// form validation
+const emailInput = document.querySelector('.email');
+
+const emailError = document.querySelector('.email-error');
+const emailValid = document.querySelector('.email-valid');
+const nameValids = document.querySelector('.name-valid');
+const naming_error_msg = document.querySelector('.naming-error');
+const email_error_message = document.querySelector('.email-error-message');
+const empty_value = document.querySelector('.empty-value');
+
+const form = document.querySelector('.form');
+const handleError = (input, regex) => regex.test(input);
+//validating the email and name function
+const checkValidity = (valid, value, errMessage, message) => {
+  const icon = {
+    good: `<span class='good'><i class='bx bxs-check-circle'></i></span>`,
+    bad: `<span class='bad'><i class='bx bxs-error-alt'></i></span>`,
+  };
+  valid
+    ? ((value.innerHTML = icon.good), (errMessage.textContent = ''))
+    : ((value.innerHTML = icon.bad), (errMessage.textContent = message));
+};
+const handleSubmit = e => {
+  const mailValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const nameValid = /^[a-zA-Z]+( [a-zA-Z]+)+$/;
+  const formData = new FormData(e.currentTarget);
+  const value = [...formData.values()];
+  const entries = Object.fromEntries([...formData.entries()]);
+  let { email, name } = entries;
+  const isEmailValid = handleError(email, mailValid);
+  const isNameValid = handleError(name, nameValid);
+
+  if (value.includes('')) {
+    e.preventDefault();
+
+    empty_value.textContent = "value can't be empty";
+    return;
+  }
+  if (isEmailValid && isNameValid) return true;
+  email || name
+    ? (empty_value.textContent = '')
+    : (empty_value.textContent = "value can't be empty");
+  checkValidity(isNameValid, nameValids, naming_error_msg, 'enter full name');
+  checkValidity(isEmailValid, emailValid, email_error_message, 'enter the correct email format');
+
+  e.preventDefault();
+};
+
+form.addEventListener('submit', handleSubmit);
