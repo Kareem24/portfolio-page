@@ -165,9 +165,15 @@ const handleSubmit = e => {
   const formData = new FormData(e.currentTarget);
   const value = [...formData.values()];
   const entries = Object.fromEntries([...formData.entries()]);
-  let { email, name } = entries;
+  let { email, name, comment } = entries;
   const isEmailValid = handleError(email, mailValid);
   const isNameValid = handleError(name, nameValid);
+  const formValue = {
+    email,
+    name,
+    comment,
+  };
+  localStorage.setItem('value', JSON.stringify(formValue));
 
   if (value.includes('')) {
     e.preventDefault();
@@ -184,5 +190,22 @@ const handleSubmit = e => {
 
   e.preventDefault();
 };
-
+//setting item to local storage
+function createAttribute(node, value) {
+  const atrr = document.createAttribute('value');
+  atrr.value = value;
+  node.setAttributeNode(atrr);
+}
+const getItem = () => {
+  const getItems = JSON.parse(localStorage.getItem('value'));
+  const { email, name, comment } = getItems;
+  const mail = document.querySelector('.email');
+  const personName = document.querySelector('.name');
+  const message = document.querySelector('.text-area');
+  console.log(message);
+  createAttribute(mail, email);
+  createAttribute(personName, name);
+  message.textContent = comment;
+};
 form.addEventListener('submit', handleSubmit);
+window.addEventListener('DOMContentLoaded', getItem);
