@@ -3,8 +3,377 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css" />
+    <meta name="description" content="My portfolio page" />
+    <meta property="og:title" content="Kareem Roqib" />
+    <meta property="og:description" content="checkout my portfolio" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- <meta property="og:image" content="images/logo.png"> -->
+    <title>Kareem Roqib</title>
+    <link rel="stylesheet" href="css/index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script defer src="./js/app.js"></script>
   </head>
-  <body></body>
+
+  <body>
+    <div class="modal d-none"></div>
+    <main class="main">
+      <header class="header">
+        <nav class="navbar d-flex">
+          <a href="#" class="logo">My logo</a>
+          <button class="hamburger" type="button" aria-label="menu button" id="hamburger">
+            <img src="./images/Union.svg" alt="hamburger menu" width="20" height="20" />
+          </button>
+          <div class="links d-flex d-none ">
+            <ul class="nav-links d-flex">
+              <li class="nav-link"><a href="#portfolio">portfolio</a></li>
+              <li class="nav-link"><a href="#about">about</a></li>
+              <li class="nav-link"><a href="#contact">contact</a></li>
+            </ul>
+            <button type="button" class="close-btn" id="close-btn" aria-label="close button">
+              <img src="./images/Icon.svg" alt="close button" width="20" height="20" />
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      <section class="introduction d-flex " id="portfolio">
+        <div class="background-image"></div>
+        <div class="text">
+          <h1>I'm Kareem Glad to see you!</h1>
+
+          <p>
+            I'm a software developer! I can help you build a product , feature or website Look
+            through some of my work and experience! If you like what you see and have a project you
+            need coded, don't hesitate to contact me.
+          </p>
+          <a href="#" class="let-connect">LET'S CONNECT</a>
+
+          <div class="social-links d-flex">
+            <a
+              href="https://twitter.com/Adekunle1855"
+              class="link"
+              aria-label="go to my twitter profile"
+              ><img src="./images/twitter.svg" alt="" width="20" height="20"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/kareem-horlah/"
+              class="link"
+              aria-label="go to my linkedin profile"
+              ><img src="./images/Linkedin.svg" alt="" width="20" height="20"
+            /></a>
+            <a href="#" class="link" aria-label="send me message on my mail"
+              ><img src="./images/medium.svg" alt="" width="20" height="20"
+            /></a>
+            <a href="https://github.com/Kareem24" class="link" aria-label="go to my github profile"
+              ><img src="./images/github.svg" alt="" width="20" height="20"
+            /></a>
+            <a href="#" class="link" aria-label="go to my angelist profile"
+              ><img src="./images/angellist.svg" alt="" width="20" height="20"
+            /></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- works start here -->
+
+    <section class="projects">
+      <div class="center d-none "></div>
+      <!-- pop up end here -->
+      <div class="project-row d-flex">
+        <div class="image-col">
+          <img src="images/Snapshoot-Portfolio.svg" alt="" width="600" height="300" />
+        </div>
+        <div class="project-text-col">
+          <h2 class="heading-dark">Tonic</h2>
+          <div class="topic-text d-flex">
+            <p class="bold-dark">CANOPY</p>
+            <div class="dot"></div>
+            <p class="bold-light">Backend Dev</p>
+            <div class="dot"></div>
+            <p class="bold-light">2015</p>
+          </div>
+          <p class="description-text desc-text">
+            A daily selection of privately personalized reads; no accounts or sign-ups required.
+          </p>
+          <div class="language d-flex">
+            <p class="lang-use">html</p>
+            <p class="lang-use">css</p>
+            <p class="lang-use">Javascript</p>
+          </div>
+          <button
+            type="button"
+            class="btn-light see-project"
+            aria-label="click to see project"
+            data-id="1"
+          >
+            See Project
+          </button>
+        </div>
+      </div>
+      <div class="project-row d-flex">
+        <div class="image-col">
+          <img src="images/second-project.svg" alt="" width="600" height="300" />
+        </div>
+        <div class="project-text-col">
+          <h2 class="heading-dark">Multi-Post Stories</h2>
+          <div class="topic-text d-flex">
+            <p class="bold-dark">CANOPY</p>
+            <div class="dot"></div>
+            <p class="bold-light">Backend Dev</p>
+            <div class="dot"></div>
+            <p class="bold-light">2015</p>
+          </div>
+          <p class="description-text desc-text">
+            A daily selection of privately personalized reads; no accounts or sign-ups required.
+          </p>
+          <div class="language d-flex">
+            <p class="lang-use">html</p>
+            <p class="lang-use">css</p>
+            <p class="lang-use">Javascript</p>
+          </div>
+          <button
+            type="button"
+            class="btn-light see-project"
+            aria-label="click to see project"
+            data-id="2"
+          >
+            See Project
+          </button>
+        </div>
+      </div>
+      <div class="project-row d-flex">
+        <div class="image-col">
+          <img src="images/third-project.svg" alt="" width="600" height="300" />
+        </div>
+        <div class="project-text-col">
+          <h2 class="heading-dark">Tonic</h2>
+          <div class="topic-text d-flex">
+            <p class="bold-dark">CANOPY</p>
+            <div class="dot"></div>
+            <p class="bold-light">Backend Dev</p>
+            <div class="dot"></div>
+            <p class="bold-light">2015</p>
+          </div>
+          <p class="description-text desc-text">
+            A daily selection of privately personalized reads; no accounts or sign-ups required.
+          </p>
+          <div class="language d-flex">
+            <p class="lang-use">html</p>
+            <p class="lang-use">css</p>
+            <p class="lang-use">Javascript</p>
+          </div>
+          <button
+            type="button"
+            class="btn-light see-project"
+            aria-label="click to see project"
+            data-id="3"
+          >
+            See Project
+          </button>
+        </div>
+      </div>
+      <div class="project-row d-flex">
+        <div class="image-col">
+          <img src="images/forth-project.svg" alt="" width="600" height="300" />
+        </div>
+        <div class="project-text-col">
+          <h2 class="heading-dark">Multi-Post Stories</h2>
+          <div class="topic-text d-flex">
+            <p class="bold-dark">CANOPY</p>
+            <div class="dot"></div>
+            <p class="bold-light">Backend Dev</p>
+            <div class="dot"></div>
+            <p class="bold-light">2015</p>
+          </div>
+          <p class="description-text desc-text">
+            A daily selection of privately personalized reads; no accounts or sign-ups required.
+          </p>
+          <div class="language d-flex">
+            <p class="lang-use">html</p>
+            <p class="lang-use">css</p>
+            <p class="lang-use">Javascript</p>
+          </div>
+          <button
+            type="button"
+            class="btn-light see-project"
+            aria-label="click to see project"
+            data-id="4"
+          >
+            See Project
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- works ends here -->
+
+    <div class="footer d-flex">
+      <!-- about start here -->
+      <section class="about " id="about">
+        <div class="text">
+          <h2 class="heading">About Myself</h2>
+
+          <p>
+            I'm a software developer! I can help you build a product , feature or website Look
+            through some of my work and experience! If you like what you see and have a project you
+            need coded, don't hesitate to contact me.
+          </p>
+          <a href="#" class="let-connect">LET'S CONNECT</a>
+
+          <div class="social-links d-flex">
+            <a
+              href="https://twitter.com/Adekunle1855"
+              class="link"
+              aria-label="go to my twitter profile"
+              ><img src="./images/twitter.svg" alt="twitter" width="20" height="20"
+            /></a>
+
+            <a
+              href="https://www.linkedin.com/in/kareem-horlah/"
+              class="link"
+              aria-label="go to my linkedin profile"
+              ><img src="./images/Linkedin.svg" alt="Linkedin icon" width="20" height="20"
+            /></a>
+
+            <a href="#" class="link" aria-label="send me message on my mail"
+              ><img src="./images/medium.svg" alt="medium" width="20" height="20"
+            /></a>
+            <a href="https://github.com/Kareem24" class="link" aria-label="go to my github profile"
+              ><img src="./images/github.svg" alt="github" width="20" height="20"
+            /></a>
+
+            <a href="#" class="link" aria-label="go to my angelist profile"
+              ><img src="./images/angellist.svg" alt="angellist" width="20" height="20"
+            /></a>
+          </div>
+          <button type="button" class="btn-light" aria-label="get my resume">Get my resume</button>
+        </div>
+      </section>
+      <!-- about ends here -->
+
+      <!-- the skills categories section start here -->
+
+      <ul class="categories">
+        <!-- starts  -->
+        <li class="category">
+          <div class="language-skill d-flex">
+            <p>Languages</p>
+            <button type="button" class="drop-down active" aria-label="languages expand">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+          <ul class="program-lang d-flex">
+            <li class="program d-flex">
+              <img
+                src="images/javascript-image.png"
+                alt="javascript-logo"
+                class="logo"
+                width="100"
+                height="50"
+              />
+              <p>Javascript</p>
+            </li>
+            <li class="program d-flex">
+              <img
+                src="images/html-image.png"
+                alt="html-image"
+                class="logo"
+                width="100"
+                height="50"
+              />
+              <p>Html</p>
+            </li>
+            <li class="program d-flex">
+              <img src="images/css-image.png" alt="css-logo" class="logo" width="100" height="50" />
+              <p>CSS</p>
+            </li>
+          </ul>
+        </li>
+        <li class="category">
+          <div class="language-skill d-flex">
+            <p>Frameworks</p>
+            <button type="button" class="drop-down" aria-label="check the frameworks">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </li>
+        <li class="line">
+          <hr />
+        </li>
+        <li class="category">
+          <div class="language-skill d-flex">
+            <p>Skills</p>
+            <button type="button" class="drop-down" aria-label="check my skills">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </li>
+        <li class="line">
+          <hr />
+        </li>
+        <!-- ends -->
+      </ul>
+    </div>
+    <div class="white">
+      <section class="contact-form-container" id="contact">
+        <div class="contact-form">
+          <h2 class="heading-dark">Contact Me</h2>
+          <p>
+            If you have an application you are interested in developing, a feature that you need
+            built or a project that needs coding. I'd love to help with it
+          </p>
+          <form class="form d-flex" action="https://formspree.io/f/xknangjb" method="post">
+            <div class="input-error">
+              <input
+                type="text"
+                name="name"
+                class="input name"
+                placeholder="input your name"
+                maxlength="30"
+              />
+              <div class="icon">
+                <span class="name-valid"></span>
+              </div>
+            </div>
+            <div class="input-error">
+              <input type="text" name="email" class="input email" placeholder="example@gmail.com" />
+              <div class="icon">
+                <span class="email-valid"></span>
+              </div>
+            </div>
+            <div class="input-error">
+              <textarea
+                name="comment"
+                class="input text-area"
+                maxlength="500"
+                placeholder="Write your message here"
+              ></textarea>
+              <div class="icon">
+                <span class="message-valid"></span>
+              </div>
+            </div>
+            <div class="submit-div submit-btn">
+              <button type="submit" class="btn-light submit-btn " id="submit-btn">
+                Get It Touch
+              </button>
+              <div class="error bottom-err">
+                <span class="empty-value"></span>
+                <span class="naming-error"></span><br /><span class="email-error-message"></span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+  </body>
 </html>
