@@ -25,6 +25,7 @@
   font-weight: 700;
   font-size: 2rem;
   color: var(--text-purple);
+  width: 70%;
 }
 
 .dot {

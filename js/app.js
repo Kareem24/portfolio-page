@@ -72,7 +72,7 @@ const showProject = projectBtns.forEach(projectBtn => {
         projectDiv.innerHTML = `
         <div class="project-row d-flex pop-up">
           <div class="project-text-col">
-            <h2 class="heading-dark">${title}</h2>
+            <h2 class="heading-dark  title">${title}</h2>
             <div class="d-flex subtitle">
               <div class="topic-text d-flex">
                 <p class="bold-dark">CANOPY</p>
