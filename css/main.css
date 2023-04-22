@@ -326,8 +326,8 @@ hr {
 
 /* pop-up design */
 .projects .pop-up {
-  width: 80%;
-  height: auto;
+  max-width: 500px;
+  max-height: 100vh;
   padding: 30px  20px;
   margin: 20px auto;
 }
@@ -351,13 +351,15 @@ hr {
   width: 100%;
   justify-content: space-between;
   position: relative;
+  height: 50px;
+  align-items: baseline;
 }
 
 .subtitle .close-modal {
   all: unset;
   position: absolute;
-  top: -55px;
-  right: 40px;
+  top: -35px;
+  right: 18px;
   cursor: pointer;
 }
 
@@ -377,13 +379,13 @@ hr {
   /* mix-blend-mode: multiply; */
   backdrop-filter: blur(6px);
   overflow: hidden;
-  z-index: 3;
+  z-index: 35;
 }
 
 /* toggle of the navbar */
 @media screen and (max-width: 785px) {
   .navbar {
-    z-index: 3333;
+    z-index: 1;
   }
 
   .navbar .links {

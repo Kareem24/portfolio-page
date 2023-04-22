@@ -72,7 +72,7 @@ const showProject = projectBtns.forEach(projectBtn => {
         projectDiv.innerHTML = `
         <div class="project-row d-flex pop-up">
           <div class="project-text-col">
-            <h2 class="heading-dark">${title}</h2>
+            <h2 class="heading-dark  title">${title}</h2>
             <div class="d-flex subtitle">
               <div class="topic-text d-flex">
                 <p class="bold-dark">CANOPY</p>
@@ -165,7 +165,13 @@ const handleSubmit = e => {
   const formData = new FormData(e.currentTarget);
   const value = [...formData.values()];
   const entries = Object.fromEntries([...formData.entries()]);
-  let { email, name } = entries;
+  let { email, name, comment } = entries;
+  const formValue = {
+    email,
+    name,
+    comment,
+  };
+  localStorage.setItem('value', JSON.stringify(formValue));
   const isEmailValid = handleError(email, mailValid);
   const isNameValid = handleError(name, nameValid);
 
@@ -184,5 +190,22 @@ const handleSubmit = e => {
 
   e.preventDefault();
 };
+//setting item to local storage
+function createAttribute(node, value) {
+  const atrr = document.createAttribute('value');
+  atrr.value = value;
+  node.setAttributeNode(atrr);
+}
+const getItem = () => {
+  const getItems = JSON.parse(localStorage.getItem('value'));
+  const { email, name, comment } = getItems;
 
+  const mail = document.querySelector('.email');
+  const personName = document.querySelector('.name');
+  const message = document.querySelector('.text-area');
+  createAttribute(mail, email);
+  createAttribute(personName, name);
+  message.textContent = comment;
+};
 form.addEventListener('submit', handleSubmit);
+window.addEventListener('DOMContentLoaded', getItem);
