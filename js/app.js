@@ -166,14 +166,14 @@ const handleSubmit = e => {
   const value = [...formData.values()];
   const entries = Object.fromEntries([...formData.entries()]);
   let { email, name, comment } = entries;
-  const isEmailValid = handleError(email, mailValid);
-  const isNameValid = handleError(name, nameValid);
   const formValue = {
     email,
     name,
     comment,
   };
   localStorage.setItem('value', JSON.stringify(formValue));
+  const isEmailValid = handleError(email, mailValid);
+  const isNameValid = handleError(name, nameValid);
 
   if (value.includes('')) {
     e.preventDefault();
@@ -199,10 +199,10 @@ function createAttribute(node, value) {
 const getItem = () => {
   const getItems = JSON.parse(localStorage.getItem('value'));
   const { email, name, comment } = getItems;
+
   const mail = document.querySelector('.email');
   const personName = document.querySelector('.name');
   const message = document.querySelector('.text-area');
-  console.log(message);
   createAttribute(mail, email);
   createAttribute(personName, name);
   message.textContent = comment;
