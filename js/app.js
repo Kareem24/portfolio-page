@@ -4,6 +4,7 @@ const data = [
     title: 'Tonic',
     image: 'images/Snapshoot-Portfolio.svg',
     description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae provident itaque
+            odit, atque ab, repudiandae reiciendis inventore necessitatibus architecto omnis, quasi
             odit, atque ab, repudiandae reiciendis inventore necessitatibus architecto omnis, quasi`,
     technology: ['html', 'css', 'javascript'],
     live: 'hello.com',
